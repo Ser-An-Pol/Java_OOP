@@ -52,6 +52,7 @@ public class Main {
         teacherController.create(new Teacher("Антон", "Антонович", "Антонов", "Химия"));
 
         teacherController.sendOnConsole();
+        teacherController.sendOnConsoleBySubject();
         teacherController.removeTeacher("Петр", "Петрович", "Петров");
         teacherController.sendOnConsole();
         teacherController.setSubjectOfTeacherByName("Сидор", "Сидорович", "Сидоров", "Физика");

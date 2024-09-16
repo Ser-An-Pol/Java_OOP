@@ -17,7 +17,7 @@ public class TeacherController implements UserController<Teacher>{
     }
 
     public Teacher getTeacherByName(String firstName, String secondName, String lastName) {
-        return teacherService.getTeacherByName(firstName, secondName, lastName);
+        return teacherService.getMemberByName(firstName, secondName, lastName);
     }
 
     public boolean setSubjectOfTeacherByName(String firstName, String secondName, String lastName, String subject) {
@@ -31,8 +31,14 @@ public class TeacherController implements UserController<Teacher>{
     }
 
     public void sendOnConsole() {
-        System.out.println("----------------------Teachers-----------------------");
+        System.out.println("------------Teachers by full name--------------------");
         teacherView.sendOnConsole(teacherService.sortMembersByFullName());
+        System.out.println("-----------------------------------------------------");
+    }
+
+    public void sendOnConsoleBySubject() {
+        System.out.println("----------------Teachers by subject-----------------");
+        teacherView.sendOnConsole(teacherService.sortStudentsBySubject());
         System.out.println("-----------------------------------------------------");
     }
 }
