@@ -1,10 +1,10 @@
 public class TeacherController implements UserController<Teacher>{
     private final TeacherService teacherService;
-    private final TeacherView teacherView;
+    private final View<Teacher> teacherView;
 
     public TeacherController(Group<Teacher> group) {
         this.teacherService = new TeacherService(group);
-        this.teacherView = new TeacherView();
+        this.teacherView = new View<>();
     }
 
     @Override

@@ -2,11 +2,11 @@ import java.util.List;
 
 public class StudentController implements UserController<Student> {
     private StudentGroupService groupService;
-    private final StudentView studentView;
+    private final View<Student> studentView;
 
     public StudentController(Group<Student> group) {
         this.groupService = new StudentGroupService(group);
-        this.studentView = new StudentView();
+        this.studentView = new View<>();
     }
 
     public void setStudyGroupService(Group<Student> group) {
