@@ -16,4 +16,8 @@ public interface IErrorMessage {
         String message = "Ввод арифметического оператора произведен некорректно! Попробуйте снова...";
         System.out.println(message);
     }
+
+    static void InvalidClassInstanceCreation(String className) {
+        System.out.printf("Не получилось создать экземпляр класса: '%s'. Создаю экземпляр класса 'Complex'");
+    }
 }

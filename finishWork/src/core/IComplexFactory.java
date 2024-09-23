@@ -1,5 +1,7 @@
 package core;
 
+import static view.IErrorMessage.InvalidClassInstanceCreation;
+
 public interface IComplexFactory<T extends IComplex> {
 
     /**
@@ -13,7 +15,7 @@ public interface IComplexFactory<T extends IComplex> {
         try {
             return tClass.getDeclaredConstructor().newInstance();
         } catch (Exception e) {
-            System.out.printf("Error in %s creation\n", tClass.getName());
+            InvalidClassInstanceCreation(tClass.getName());
             return (T)new Complex();
         }
     }
